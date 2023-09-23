@@ -1,0 +1,7 @@
+footer {
+  padding-bottom: 1.125rem;
+  color: $clr_black;
+  text-transform: capitalize;
+  @include typography(0.875rem, 500);
+  @include flex-box(center, center);
+}

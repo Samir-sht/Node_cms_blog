@@ -1,0 +1,34 @@
+header {
+  @include position(relative, 0, 0);
+
+  nav {
+    @include height_width(100px, 100%);
+    @include flex-box(space-between, center);
+    padding: 0.5rem;
+
+    h3 {
+      text-transform: capitalize;
+      @include typography(1.5rem, 600);
+    }
+
+    button {
+      @include typography(1rem, 500);
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      background-color: $clr_black;
+      color: $clr_white;
+      border-radius: 20px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #111;
+      }
+    }
+  }
+}
+
+main {
+  margin-bottom: 2rem;
+}

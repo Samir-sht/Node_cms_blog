@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 991px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.img-fluid {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.card img {
+  aspect-ratio: 16/9;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.4s ease-in;
+}
+.card img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.card__details {
+  padding: 0.5rem 0.75rem;
+}
+.card__details h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.card__details p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  line-height: normal;
+}
+.card__details a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.875rem;
+  transition: font-weight 0.2s linear;
+}
+.card__details a:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+header nav {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+header nav h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+header nav button {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+header nav button:hover {
+  cursor: pointer;
+  background-color: #111;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding-bottom: 1.125rem;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog_cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  gap: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .blog_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media (max-width: 600px) {
+  .blog_cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

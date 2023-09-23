@@ -1,0 +1,45 @@
+@mixin flex-box($justify, $align) {
+  display: flex;
+  justify-content: #{$justify};
+  align-items: #{$align};
+}
+
+@mixin grid($column, $rows) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $rows;
+}
+
+@mixin img($height, $width, $object) {
+  height: $height;
+  width: $width;
+  object-fit: #{$object};
+}
+
+@mixin ul($padding, $margin, $list) {
+  padding: #{$padding};
+  margin: #{$margin};
+  list-style: #{$list};
+}
+
+@mixin position($position, $y-axis, $x-axis) {
+  position: #{$position};
+  top: #{$y-axis};
+  left: #{$x-axis};
+}
+
+@mixin visibility($visible, $opacity) {
+  visibility: #{$visible};
+  opacity: #{$opacity};
+}
+
+@mixin typography($size, $weight) {
+  font-size: #{$size};
+  font-weight: #{$weight};
+}
+
+@mixin height_width($height, $width) {
+  height: $height;
+  width: $width;
+  overflow: hidden;
+}
