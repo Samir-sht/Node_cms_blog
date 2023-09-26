@@ -32,7 +32,7 @@
   border-radius: 8px 8px 0 0;
   transition: all 0.4s ease-in;
 }
-.card img:hover {
+.card:hover img {
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -49,6 +49,10 @@
   font-weight: 400;
   margin-bottom: 0.25rem;
   line-height: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .card__details a {
   text-decoration: none;
@@ -67,37 +71,49 @@ header {
   left: 0;
 }
 header nav {
-  height: 100px;
+  height: 80px;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  border-bottom: 1px solid #f2f2f2;
 }
 header nav h3 {
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 600;
 }
+header nav h3 a {
+  text-decoration: none;
+  color: #000;
+}
 header nav button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+header nav button a {
+  text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
   background-color: #000;
   color: #fff;
   border-radius: 20px;
   transition: all 0.5s ease-in-out;
 }
-header nav button:hover {
+header nav button a:hover {
   cursor: pointer;
-  background-color: #111;
+  background-color: #fff;
+  border: 1.25px solid rgba(0, 0, 0, 0.3);
+  color: #000;
 }
 
 main {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 footer {
@@ -117,6 +133,93 @@ footer {
   grid-template-rows: auto;
   gap: 1.5rem;
 }
+.blog_details {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.blog_details h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: normal;
+  margin-bottom: 0.5rem;
+}
+.blog_details p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+.blog_details small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.blog_details figure {
+  height: 350px;
+  margin-bottom: 1rem;
+}
+
+.account_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.account_form .form {
+  height: 280px;
+  width: 300px;
+  overflow: hidden;
+  padding: 1rem 1.125rem;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.account_form .form h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.account_form .form__group {
+  margin-bottom: 0.875rem;
+}
+.account_form .form__group input[type=email],
+.account_form .form__group input[type=password] {
+  height: 45px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #000;
+  padding: 0 0.5rem;
+}
+.account_form .form button {
+  height: 45px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  display: block;
+  text-align: center;
+  transition: background-color 0.4s linear;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+.account_form .form button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.account_form .form p {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.account_form .form p a {
+  text-decoration: none;
+  margin-left: 2px;
+}
 
 @media (max-width: 991px) {
   .blog_cards {
@@ -130,5 +233,19 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    margin-top: 0;
+  }
+  .blog_details figure {
+    height: 100%;
+  }
+  .blog_details h1 {
+    font-size: 1.125rem;
+    line-height: normal;
+  }
+  .blog_details p {
+    font-size: 0.875rem;
+  }
+  .blog main {
+    margin-bottom: 1rem;
   }
 }

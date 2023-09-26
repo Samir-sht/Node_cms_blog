@@ -30,11 +30,10 @@
     aspect-ratio: 16/9;
     border-radius: 8px 8px 0 0;
     transition: all 0.4s ease-in;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
+  }
+  &:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
   }
 
   &__details {
@@ -51,6 +50,10 @@
       font-weight: 400;
       margin-bottom: 0.25rem;
       line-height: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     a {
       text-decoration: none;
