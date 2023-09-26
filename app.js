@@ -22,6 +22,12 @@ app.get("/blog", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("components/form/login.ejs");
 });
+
+//login
+app.get("/register", (req, res) => {
+  res.render("components/form/register.ejs");
+});
+
 app.listen(8000, () => {
   console.log("Project is running at port 8000");
 });
