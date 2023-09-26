@@ -10,6 +10,7 @@ To run the code . u must have installed node.js and packages like:ejs,nodemon,ex
    b. npm install ejs
    c. npm install nodemon
    d. npm instal sass
+   e. npm install sequelize mysql2
 
 # Run
 
