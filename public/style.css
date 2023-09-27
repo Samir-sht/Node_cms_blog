@@ -64,6 +64,32 @@
   cursor: pointer;
   font-weight: 600;
 }
+.card__details .action {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+.card__details .action span.material-icons {
+  font-size: 0.75rem;
+}
+.card__details .action span.material-icons a {
+  padding: 0.5rem 0;
+  margin-left: 2px;
+}
+.card__details .action span.edit:hover {
+  color: green;
+}
+.card__details .action span.edit a:hover {
+  color: green;
+}
+.card__details .action span.delete:hover {
+  color: red;
+}
+.card__details .action span.delete a:hover {
+  color: red;
+}
 
 header {
   position: relative;
@@ -250,4 +276,147 @@ footer {
   .blog main {
     margin-bottom: 1rem;
   }
+}
+.container-fluid {
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+}
+.container-fluid aside {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  background-color: #111;
+  padding: 1rem;
+}
+.container-fluid aside nav {
+  padding: 0.5rem;
+}
+.container-fluid aside nav h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0.875rem 0;
+}
+.container-fluid aside nav h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+.container-fluid aside nav ul {
+  padding: 1rem 0;
+  display: block;
+}
+.container-fluid aside nav ul li {
+  list-style: none;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container-fluid aside nav ul li span.material-icons {
+  color: #fff;
+}
+.container-fluid aside nav ul li a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: capitalize;
+}
+.container-fluid aside nav button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.container-fluid aside nav button a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.container-fluid aside nav button a:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1.25px solid rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+.container-fluid .add_blog {
+  padding: 1.75rem 1rem;
+}
+.container-fluid .add_blog h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.875rem 0;
+  text-transform: capitalize;
+}
+.container-fluid .add_blog .form {
+  padding: 1rem 0;
+}
+.container-fluid .add_blog .form_group {
+  margin-bottom: 0.875rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.625rem;
+  flex-direction: column;
+}
+.container-fluid .add_blog .form_group label {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.container-fluid .add_blog .form_group input[type=text] {
+  height: 45px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #000;
+  padding: 0 0.5rem;
+}
+.container-fluid .add_blog .form_group textarea {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0 0.5rem;
+}
+.container-fluid .add_blog .form button {
+  margin-top: 1.5rem;
+  height: 40px;
+  width: 150px;
+  overflow: hidden;
+  background-color: #000;
+  display: block;
+  text-align: center;
+  transition: background-color 0.4s linear;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.container-fluid .add_blog .form button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container-fluid .view_blogs {
+  padding: 1.75rem 1rem;
+}
+.container-fluid .view_blogs h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.875rem 0;
+  text-transform: capitalize;
+}
+.container-fluid .view_blogs hr {
+  margin-bottom: 1rem;
 }

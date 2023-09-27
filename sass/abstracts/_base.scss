@@ -66,5 +66,42 @@
         font-weight: 600;
       }
     }
+
+    .action {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.5rem 0;
+
+      span {
+        &.material-icons {
+          font-size: 0.75rem;
+
+          a {
+            padding: 0.5rem 0;
+            margin-left: 2px;
+          }
+        }
+
+        &.edit {
+          &:hover {
+            color: green;
+          }
+          a:hover {
+            color: green;
+          }
+        }
+
+        &.delete {
+          &:hover {
+            color: red;
+          }
+          a:hover {
+            color: red;
+          }
+        }
+      }
+    }
   }
 }

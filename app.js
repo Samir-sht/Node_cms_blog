@@ -23,9 +23,29 @@ app.get("/login", (req, res) => {
   res.render("components/form/login.ejs");
 });
 
-//login
+//register
 app.get("/register", (req, res) => {
   res.render("components/form/register.ejs");
+});
+
+//dashboard
+app.get("/dashboard", (req, res) => {
+  res.render("components/dashboard/dashboard.ejs");
+});
+
+//createblog
+app.get("/create", (req, res) => {
+  res.render("components/dashboard/createblog.ejs");
+});
+
+//viewblog
+app.get("/view", (req, res) => {
+  res.render("components/dashboard/allblog.ejs");
+});
+
+//editblog
+app.get("/edit", (req, res) => {
+  res.render("components/dashboard/editblog.ejs");
 });
 
 app.listen(8000, () => {

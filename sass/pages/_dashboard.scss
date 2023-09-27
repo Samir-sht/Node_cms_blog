@@ -1,0 +1,141 @@
+.container-fluid {
+  max-width: 1440px;
+
+  @include grid(20% 80%, auto);
+  aside {
+    @include position(relative, 0, 0);
+    min-height: 100vh;
+    background-color: #111;
+    padding: 1rem;
+
+    nav {
+      padding: 0.5rem;
+
+      h3 {
+        text-transform: capitalize;
+        @include typography(1.5rem, 500);
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0.875rem 0;
+
+        a {
+          text-decoration: none;
+          color: $clr_white;
+        }
+      }
+      ul {
+        padding: 1rem 0;
+        display: block;
+        li {
+          list-style: none;
+          margin: 1rem 0;
+          @include flex-box(flex-start, center);
+          gap: 0.5rem;
+
+          span.material-icons {
+            color: $clr_white;
+          }
+
+          a {
+            text-decoration: none;
+            @include typography(1.125rem, 500);
+            color: $clr_white;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        a {
+          text-decoration: none;
+          @include typography(1rem, 500);
+          padding: 0.5rem 1rem;
+
+          background-color: $clr_black;
+          color: $clr_white;
+          border-radius: 20px;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $clr_white;
+            border: 1.25px solid rgba(0, 0, 0, 0.3);
+            color: $clr_black;
+          }
+        }
+      }
+    }
+  }
+  //createblog
+  .add_blog {
+    padding: 1.75rem 1rem;
+    h3 {
+      @include typography(1.25rem, 500);
+      padding: 0.875rem 0;
+      text-transform: capitalize;
+    }
+
+    .form {
+      padding: 1rem 0;
+
+      &_group {
+        margin-bottom: 0.875rem;
+        @include flex-box(flex-start, flex-start);
+        gap: 0.625rem;
+        flex-direction: column;
+
+        label {
+          @include typography(1rem, 400);
+          text-transform: capitalize;
+        }
+
+        input[type="text"] {
+          @include height_width(45px, 100%);
+          border: 1px solid $clr_black;
+          padding: 0 0.5rem;
+        }
+
+        textarea {
+          @include height_width(200px, 100%);
+          overflow-y: scroll;
+          padding: 0 0.5rem;
+        }
+      }
+      button {
+        margin-top: 1.5rem;
+        @include height_width(40px, 150px);
+        background-color: $clr_black;
+        display: block;
+        text-align: center;
+        transition: background-color 0.4s linear;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: $clr_white;
+        border-radius: 0.5rem;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+  //view blogs
+  .view_blogs {
+    padding: 1.75rem 1rem;
+    h3 {
+      @include typography(1.25rem, 500);
+      padding: 0.875rem 0;
+      text-transform: capitalize;
+    }
+
+    hr {
+      margin-bottom: 1rem;
+    }
+  }
+}

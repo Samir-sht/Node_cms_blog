@@ -1,0 +1,25 @@
+<%- include("../head.ejs")%>
+
+    <div class="container-fluid">
+        <%-include ("sidebar.ejs")%>
+            <div class="add_blog">
+                <h3>Update Blog</h3>
+                <hr>
+                <form class="form" action="#" enctype="multipart/form-data">
+                    <div class="form_group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="description">description</label>
+                        <textarea name="description" required></textarea>
+                    </div>
+                    <div class="form_group">
+                        <label for="image">Image</label>
+                        <input type="file" accept="image/*" name="image" required>
+                    </div>
+
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+    </div>
